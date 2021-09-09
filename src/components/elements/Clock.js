@@ -21,10 +21,10 @@ const DateText = styled.span`
 
 const Clock = () => {
   const [date, setDate] = useState({
-    hours: "00",
-    minutes: "00",
+    hours: "21",
+    minutes: "37",
     seconds: "00",
-    date: "siema siema kurwa witam",
+    date: "September 8, 2021",
   });
 
   useEffect(() => {

@@ -11,6 +11,10 @@ const MainContainer = styled.div`
 
 const CategoryContainer = styled.article`
   margin-bottom: 30px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const CategoryTitle = styled.h3`
@@ -24,12 +28,16 @@ const CategoryTitle = styled.h3`
   & > svg {
     vertical-align: middle;
   }
+
+  @media (max-width: 992px) {
+    font-size: clamp(0.75em, 1.85vw, 2em);
+    margin-bottom: 5px;
+  }
 `;
 
 const CategoryBody = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const CategoryEntry = styled.span`
@@ -37,6 +45,17 @@ const CategoryEntry = styled.span`
   font-weight: 200;
   font-size: 1.2vw;
   text-align: center;
+  margin-bottom: 5px;
+  flex: 1 1 33%;
+
+  @media (max-width: 992px) {
+    font-size: clamp(0.6em, 1.5vw, 2em);
+    flex: 1 1 50%;
+  }
+
+  @media (max-width: 576px) {
+    flex: 1 1 100%;
+  }
 `;
 
 const Main = () => {
@@ -84,8 +103,9 @@ const Main = () => {
           anime/manga
         </CategoryTitle>
         <CategoryBody>
+          <CategoryEntry>Anime News</CategoryEntry>
           <CategoryEntry>MyAnimeList</CategoryEntry>
-          <CategoryEntry>Anilist</CategoryEntry>
+          <CategoryEntry>AniList</CategoryEntry>
         </CategoryBody>
       </CategoryContainer>
       <CategoryContainer>
@@ -94,7 +114,8 @@ const Main = () => {
           programming
         </CategoryTitle>
         <CategoryBody>
-          <CategoryEntry>something</CategoryEntry>
+          <CategoryEntry>GitHub</CategoryEntry>
+          <CategoryEntry>GitLab</CategoryEntry>
         </CategoryBody>
       </CategoryContainer>
     </MainContainer>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Clock from "./elements/Clock";
 import Greet from "./elements/Greet";
+import Weather from "./elements/Weather";
 import Main from "./Main";
 
 const AppContainer = styled.div`
@@ -20,6 +21,7 @@ function App() {
       <Clock />
       <Greet />
       <Main />
+      <Weather />
     </AppContainer>
   );
 }
