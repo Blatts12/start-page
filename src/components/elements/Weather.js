@@ -9,7 +9,7 @@ const WeatherContainer = styled.div`
   height: 80px;
   display: grid;
   grid-gap: 0;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1.2fr 2.5fr;
   grid-template-areas:
     "icon temp"
     "city_name city_name";
